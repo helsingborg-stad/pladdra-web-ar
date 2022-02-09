@@ -1,13 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import { ThreeDemoScreen } from "@app/screens";
+import { ThreeDemoScreen, ReactThreeArJsScreen } from "@app/screens";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
   <React.StrictMode>
-    <ThreeDemoScreen />
+    <ReactThreeArJsScreen />
   </React.StrictMode>,
   document.getElementById("root")
 );
