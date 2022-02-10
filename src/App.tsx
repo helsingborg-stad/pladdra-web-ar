@@ -6,13 +6,17 @@ import {
   ReactThreeArJsScreen,
   ReactThreeXrScreen,
   CustomModelViewerScreen,
+  ModelViewerScreenWithMynt,
+  ModelViewerScreenWithH22,
 } from "@app/screens";
 
 function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<CustomModelViewerScreen />} />
+        <Route path="/" element={<ModelViewerScreenWithMynt />} />
+        <Route path="mynt" element={<ModelViewerScreenWithMynt />} />
+        <Route path="h22" element={<ModelViewerScreenWithH22 />} />
         <Route path="custom-viewer" element={<CustomModelViewerScreen />} />
         <Route path="three-demo" element={<ThreeDemoScreen />} />
         <Route path="react-three-arjs" element={<ReactThreeArJsScreen />} />
