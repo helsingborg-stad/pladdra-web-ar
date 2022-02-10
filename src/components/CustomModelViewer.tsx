@@ -15,7 +15,7 @@ const defaultProps = {
   position: [0, 0, 0],
 };
 
-function ModelViewer({ modelPath, scale, position }: Props) {
+function CustomModelViewer({ modelPath, scale, position }: Props) {
   return (
     <Canvas>
       <ambientLight intensity={0.3} />
@@ -32,6 +32,6 @@ function ModelViewer({ modelPath, scale, position }: Props) {
     </Canvas>
   );
 }
-ModelViewer.defaultProps = defaultProps;
+CustomModelViewer.defaultProps = defaultProps;
 
-export default ModelViewer;
+export default CustomModelViewer;

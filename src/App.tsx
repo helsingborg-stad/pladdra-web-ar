@@ -5,15 +5,15 @@ import {
   ThreeDemoScreen,
   ReactThreeArJsScreen,
   ReactThreeXrScreen,
-  GLTFViewerScreen,
+  CustomModelViewerScreen,
 } from "@app/screens";
 
 function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<GLTFViewerScreen />} />
-        <Route path="gltf-viewer" element={<GLTFViewerScreen />} />
+        <Route path="/" element={<CustomModelViewerScreen />} />
+        <Route path="custom-viewer" element={<CustomModelViewerScreen />} />
         <Route path="three-demo" element={<ThreeDemoScreen />} />
         <Route path="react-three-arjs" element={<ReactThreeArJsScreen />} />
         <Route path="react-three-xr" element={<ReactThreeXrScreen />} />
