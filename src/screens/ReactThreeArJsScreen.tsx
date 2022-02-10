@@ -1,9 +1,11 @@
-import { Box } from "@app/components";
+import { Box, GLTFModel } from "@app/components";
 import { Canvas } from "@react-three/fiber";
-import React, { useState } from "react";
+import React, { Suspense, useState } from "react";
 
 import { ARCanvas, ARMarker } from "@artcom/react-three-arjs";
 import Pattern from "@assets/pattern-pattern-ar-marker-simple-512.patt";
+import GLTF_MYNT from "@assets/mynt.glb";
+import GLTF_BARNENS_H22 from "@assets/barnens_h22.glb";
 
 function ReactThreeArJsScreen() {
   const [markerFound, setMarkerFound] = useState(false);
@@ -33,10 +35,18 @@ function ReactThreeArJsScreen() {
             setMarkerFound(false);
           }}
         >
-          <mesh>
+          <Suspense fallback={null}>
+            {/* <Model3D source={GLTF_MYNT} /> */}
+            <GLTFModel
+              modelPath={GLTF_BARNENS_H22}
+              scale={0.1}
+              position={[0, 0, 0]}
+            />
+          </Suspense>
+          {/* <mesh>
             <boxBufferGeometry args={[1, 1, 1]} />
             <meshStandardMaterial color="green" />
-          </mesh>
+          </mesh> */}
         </ARMarker>
       </ARCanvas>
     </div>
