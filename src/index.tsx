@@ -1,12 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import {
-  ThreeDemoScreen,
-  ReactThreeArJsScreen,
-  ReactThreeXrScreen,
-} from "@app/screens";
 import WebXRPolyfill from "webxr-polyfill";
+import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
@@ -14,7 +10,9 @@ const polyfill = new WebXRPolyfill();
 
 ReactDOM.render(
   <React.StrictMode>
-    <ReactThreeXrScreen />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")
 );
