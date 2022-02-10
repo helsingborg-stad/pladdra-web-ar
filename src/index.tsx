@@ -5,6 +5,7 @@ import WebXRPolyfill from "webxr-polyfill";
 import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import "@google/model-viewer/dist/model-viewer";
 
 const polyfill = new WebXRPolyfill();
 
