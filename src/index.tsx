@@ -1,13 +1,20 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import { ThreeDemoScreen, ReactThreeArJsScreen } from "@app/screens";
+import {
+  ThreeDemoScreen,
+  ReactThreeArJsScreen,
+  ReactThreeXrScreen,
+} from "@app/screens";
+import WebXRPolyfill from "webxr-polyfill";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
+const polyfill = new WebXRPolyfill();
+
 ReactDOM.render(
   <React.StrictMode>
-    <ReactThreeArJsScreen />
+    <ReactThreeXrScreen />
   </React.StrictMode>,
   document.getElementById("root")
 );
