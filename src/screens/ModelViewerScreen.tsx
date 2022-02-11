@@ -25,7 +25,7 @@ function ModelViewerScreen({ gltf, usdz }: Props) {
           width: 800,
           maxWidth: "100vw",
           height: 800,
-          maxHeight: "100vh",
+          maxHeight: "calc(100vh - 24px)",
           marginLeft: "auto",
           marginRight: "auto",
         }}
