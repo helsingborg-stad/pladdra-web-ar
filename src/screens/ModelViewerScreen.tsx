@@ -18,8 +18,18 @@ const defaultProps = {
 function ModelViewerScreen({ gltf, usdz }: Props) {
   return (
     <div>
-      <h2>ModelViewerScreen</h2>
-      <div style={{ position: "relative", width: 400, height: 400 }}>
+      {/* <h2>ModelViewerScreen</h2> */}
+      <div
+        style={{
+          position: "relative",
+          width: 800,
+          maxWidth: "100vw",
+          height: 800,
+          maxHeight: "100vh",
+          marginLeft: "auto",
+          marginRight: "auto",
+        }}
+      >
         <ModelViewerElement gltf={gltf} usdz={usdz} />
       </div>
     </div>
